@@ -1,27 +1,18 @@
-function App() {
-  // antes del retunr para crear funciones o validaciones
-  const sumar = () => {
-    console.log( 2 + 2 )
-  }
-  
-  sumar();
+import Formulario from "./components/Formulario"
+import Header from "./components/Header"
+import ListadoPacientes from "./components/ListadoPacientes"
+import './index.css'
 
-  // dsps del retunr es la parte visible de nuestro programa
+function App() {
   return (
-    <>
-      <div>
-        <h1> Hola Mundo </h1>
+    <div className="container mx-auto mt-20">
+      <Header />
+      <div className="mt-12 md:flex">
+        <Formulario />
+        <ListadoPacientes />
       </div>
-      <div>
-        <h1> Hola Mundo </h1>
-      </div>
-    </>
+    </div>
   )
 }
-
-// un elemento que tiene apertura y cierre debe tener las dos etiquetas
-// si solo tiene una apertura colocar diagonal al final
-// cada componenete debe tener un return
-// solo puedo retornar maximo un elemento en el nivel masa alto
 
 export default App
